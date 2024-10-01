@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8"/> <!--supposed to specify the character set the application will be using-->
+    <meta name - “viewport” content = “width=device-width, initial-scale=1.0” /> <!--basically where on the page should the content be rendered-->
+    <title>Course Quest!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
+    <link href="styles.css" rel= "stylesheet"/>
+    
+
+
+
+
+</head>
+
+<body style="background-color: rgb(50, 75, 100);">
+    <h1 style="text-align: center;">CourseMate!</h1>
+    <h2 style="text-align: center;">ver 0.3</h2>
+    <h2 style="text-align: center"> Find the best course for you! </h2>
+    
+    <p>As UNC students trying to make a living off of ConnectCarolina, sometimes many students run into many issues with selecting the classes
+    they desire, given the first come first serve mentality of taking all the sections of COMP 110.<br> 
+    There is also the problem in which students are frantically searching for classes on the catalog which look interesting but they can't Find
+    any. <br> Luckily, our application should do just the thing to solve both problems, by being able to search up classes of your interest directly
+    in an time efficient manner!
+    </p>
+    
+    <br/>
+    <br/>
+    <br/>
+    <center>
+      <!--the "name" for the checkbox is for the label-->
+      <!--is it possible to put the checkboxes into one arraylist to avoid using too many ids in my JavaScript code?-->
+    <h2 style="color: white;"> How many credit hours is this course?</h2>
+      <div>
+        <label>How many credit hours do you need fufilled?</label><br/>
+        <input type="checkbox" id="credi1" name="credit1" value="1">
+        <label for="credit1">1</label><br>
+        <input type="checkbox" id="credi2" name="credit2" value="1.5">
+        <label for="credit1"> 1.5</label><br>
+        <input type="checkbox" id="credi3" name="credit3" value="3">
+        <label for="credit3">3</label><br>
+        <input type="checkbox" id="credi4" name="credit4" value="4">
+        <label for="credit4">4</label><br>
+      </div>
+    <br/>
+    <h2>What general education requirements do you need fufilled?</h2>
+    <div class="flex-container">
+        <div id="FYF">
+          <h3>First-Year Foundations</h3>
+          <br>
+        </div>
+        <div id="Focus">
+          <h3>Focus Capacities</h3>
+          <br>
+        </div>
+        <div id="Reflect">
+          <h3>Reflection and Integration</h3>
+          <br>
+        </div>
+    </div>
+
+    <!--Is there any way to toggle the options so that the textArea can change every time?
+    Can some CSS be put here too to make the buttons more fashionable?-->
+    <!--Is there a way to make the textArea show the options by default-->
+    <!--Is there a way to check multiple options of a dropdown at a time?-->
+    <!--How to webscrape data from online? How to get keywords from textArea and
+    find the closest matchup?-->
+
+    
+    <br/>
+    <h2>What are your interests for a course?</h2>
+    <form id="form"> 
+        <input type="search" id="query" name="q" placeholder="Search...">
+        <button onclick="searchCourse()">Search</button>
+    </form>
+    <br/>
+    <br/>
+    <textarea id="testArea" rows="20" cols="100">
+
+    </textarea>
+    </center>
+    
+</body>
+<script src="backend.js"></script>
+
+</html>
